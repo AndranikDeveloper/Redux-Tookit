@@ -1,24 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import RecipeItem from './RecipeItem/RecipeItem';
+import { BsFillBookmarkHeartFill } from 'react-icons/bs';
+import { useFavorites } from './hooks/useFavorites.js';
+import User from './user/User.js';
 
 function App() {
+  // const favorites = useSelector((state) => state.favorites);
+  const { favorites } = useFavorites();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <section>
+      <header className='header'>
+        <BsFillBookmarkHeartFill style={{ width: '40px', height: '40px' }} />
+        <span className='fav-count'>{favorites.length}</span>
       </header>
-    </div>
+
+      <div className='App'>
+        <User />
+        <RecipeItem
+          recipe={{
+            name: 'Pizza',
+            id: 1,
+          }}
+        />
+        <RecipeItem
+          recipe={{
+            name: 'Pasta',
+            id: 2,
+          }}
+        />
+        <RecipeItem
+          recipe={{
+            name: 'Barbeque',
+            id: 3,
+          }}
+        />
+        <RecipeItem
+          recipe={{
+            name: 'Xachapuri',
+            id: 4,
+          }}
+        />
+      </div>
+    </section>
   );
 }
 

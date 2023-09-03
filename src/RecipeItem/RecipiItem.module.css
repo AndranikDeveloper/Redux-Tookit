@@ -1,0 +1,23 @@
+.item {
+  background: gray;
+  border: 1px solid white;
+  border-radius: 7px;
+  padding: 20px;
+  width: 600px;
+  color: white;
+  margin: 15px;
+}
+
+.add_btn {
+  padding: 10px;
+  border-radius: 4px;
+  border: transparent;
+  cursor: pointer;
+  background-color: rgb(130, 234, 199);
+  transition: background-color 0.4s ease-in-out;
+}
+
+.add_btn:hover {
+  background-color: rgb(48, 112, 91);
+  color: white;
+}

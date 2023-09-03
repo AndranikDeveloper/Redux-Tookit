@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.header {
+  display: flex;
+  justify-content: end;
+}
+
+.fav-count {
+  border: 1px solid transparent;
+  font-size: 19px;
+  background-color: lightblue;
+  align-items: center;
+  text-align: center;
+  padding: 7px;
+  border-radius: 7px;
+  color: gray;
+}
